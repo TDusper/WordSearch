@@ -1,5 +1,5 @@
 //
-//  Model.swift
+//  Word.swift
 //  WordSearch
 //
 //  Created by user186139 on 4/28/21.
@@ -8,7 +8,8 @@
 
 import Foundation
 
-struct TaskEntry: Codable{
-    let id: String
-    let language: String
+struct Word: Codable{
+    let metadata: Metadata
+    let query: String
+    let results: Array<Word>
 }
