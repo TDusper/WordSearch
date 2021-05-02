@@ -12,6 +12,7 @@ struct SearchView: View {
     
     var planets = ["Mercury", "Venus", "Earth", "Mars"]
     @State var searchText: String = ""
+    var api = ApiHandler()
     
     var body: some View {
         NavigationView {

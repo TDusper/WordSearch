@@ -9,7 +9,7 @@
 import Foundation
 
 struct Metadata: Codable {
-    let operation: String
+    let operation: String //obj
     let provider: String
-    let schema: String
+    let schema: String //obj
 }
