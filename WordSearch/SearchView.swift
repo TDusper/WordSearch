@@ -17,7 +17,9 @@ struct SearchView: View {
     var body: some View {
         NavigationView{
             VStack{
-            TextField("Search", text: $apiHandler.searchText)
+                TextField("Search", text: $apiHandler.searchText, onEditingChanged:{
+                    value in self.apiHandler.retrieveData(keyword: self.apiHandler.searchText)
+                })
             List {
                 ForEach(data) { entry in
                     NavigationLink(destination: DetailView()) {
@@ -29,6 +31,11 @@ struct SearchView: View {
                 }
             }                .navigationBarTitle("Word Search")
             }
+        }
+    }
+    func updateSearch(for searchText: String){
+        if !searchText.isEmpty{
+            apiHandler.retrieveData(keyword: searchText)
         }
     }
 }
