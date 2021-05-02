@@ -12,6 +12,8 @@ struct DetailView: View {
     var word: WordItem
     @State var definition: String = ""
     @State var examples: String = ""
+    @State var sound: String = ""
+
 
 
     var body: some View {
@@ -22,6 +24,10 @@ struct DetailView: View {
                 TextField(word.definition, text: $definition)
             Text("Examples")
                 TextField(word.example, text: $examples)
+            Text("Sound Examples")
+                ForEach(word.sound_urls, id: \.self){sound in
+                    TextField(sound, text: self.$sound)
+                    }
             }
        
 
