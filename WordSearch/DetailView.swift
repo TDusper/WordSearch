@@ -9,20 +9,19 @@
 import SwiftUI
 
 struct DetailView: View {
-    @State var definitions: String = ""
+    var word: WordItem
+    @State var definition: String = ""
     @State var examples: String = ""
-
-
 
 
     var body: some View {
         VStack{
             Group{
-            Text("Hello, World!")
-            Text("definitions")
-            TextField("Definitions", text: $definitions)
+                Text(word.word)
+            Text("Definition")
+                TextField(word.definition, text: $definition)
             Text("Examples")
-            TextField("Examples", text: $examples)
+                TextField(word.example, text: $examples)
             }
        
 
@@ -32,8 +31,4 @@ struct DetailView: View {
     }
 }
 
-struct DetailView_Previews: PreviewProvider {
-    static var previews: some View {
-        DetailView()
-    }
-}
+

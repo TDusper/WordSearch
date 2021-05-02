@@ -22,7 +22,7 @@ struct SearchView: View {
                 })
             List {
                 ForEach(data) { entry in
-                    NavigationLink(destination: DetailView()) {
+                    NavigationLink(destination: DetailView(word: entry)) {
                     // existing contents…
 
                         Text(entry.word)
