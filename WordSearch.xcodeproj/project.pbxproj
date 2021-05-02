@@ -45,6 +45,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		85130D49263EB7400006EADB /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		8534988026398F3A0090405E = {
 			isa = PBXGroup;
 			children = (
@@ -64,6 +71,7 @@
 		8534988B26398F3A0090405E /* WordSearch */ = {
 			isa = PBXGroup;
 			children = (
+				85130D49263EB7400006EADB /* ViewModels */,
 				85C277C5263B290A00991B24 /* Models */,
 				8534988C26398F3A0090405E /* AppDelegate.swift */,
 				8534988E26398F3A0090405E /* SceneDelegate.swift */,

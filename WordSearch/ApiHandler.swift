@@ -13,14 +13,13 @@ class ApiHandler: ObservableObject {
     let appId = "mashape-community-urban-dictionary.p.rapidapi.com"
     let appKey = "b761cc5fc2msh502ba40f25e4418p1f3f2bjsnfe77bd7e8fa1"
     let language = "en-gb"
-    
-    
+    @Published var searchText = "wat"
     @Published private(set) var data: WordList? = nil
     
     private var cancellable: Set<AnyCancellable> = []
     
     init() {
-        retrieveData(keyword: "wat")
+        retrieveData(keyword: searchText)
     }
     
     func retrieveData(keyword: String) {
@@ -39,8 +38,7 @@ class ApiHandler: ObservableObject {
             .sink(receiveCompletion: { print($0) },
                   receiveValue: { self.data = $0 })
             .store(in: &cancellable)
-  //      let session = URLSession.shared
-    //    _ = session.dataTask(with: request, completionHandler: {data})
+
     }
 }
 

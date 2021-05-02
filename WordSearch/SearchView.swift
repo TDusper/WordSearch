@@ -9,38 +9,31 @@
 import Foundation
 import SwiftUI
 struct SearchView: View {
-    
-    var planets = ["Mercury", "Venus", "Earth", "Mars"]
-    @State var searchText: String = ""
-    var api = ApiHandler()
+    @ObservedObject private var apiHandler = ApiHandler()
+    private var data: [WordItem] {
+        apiHandler.data?.list ?? []
+    }
     
     var body: some View {
-        NavigationView {
+        NavigationView{
+            VStack{
+            TextField("Search", text: $apiHandler.searchText)
             List {
-                TextField("WordSearch", text: $searchText)
-                    .padding(7)
-                    .background(Color(.systemGray6))
-                    .cornerRadius(8)
-                
-                ForEach(
-                 
-                    planets.filter {
-                        searchText.isEmpty ||
-                        $0.localizedStandardContains(searchText)
-                    },
-                    id: \.self
-                ) { eachPlanet in
+                ForEach(data) { entry in
                     NavigationLink(destination: DetailView()) {
-    // existing contents…
+                    // existing contents…
 
-                    Text(eachPlanet)
-                    }
+                        Text(entry.word)
+                                    }
+                 
                 }
+            }                .navigationBarTitle("Word Search")
             }
-                .navigationBarTitle("Planets")
         }
     }
 }
+
+
 
 struct SearchView_Previews: PreviewProvider {
     static var previews: some View {

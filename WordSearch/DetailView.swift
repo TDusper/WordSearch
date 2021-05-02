@@ -9,11 +9,8 @@
 import SwiftUI
 
 struct DetailView: View {
-    @State var etymologies: String = ""
-    @State var inflections: String = ""
     @State var definitions: String = ""
     @State var examples: String = ""
-    @State var synonyms: String = ""
 
 
 
@@ -22,18 +19,12 @@ struct DetailView: View {
         VStack{
             Group{
             Text("Hello, World!")
-            Text("Etymologies:")
-            TextField("Etymologies", text: $etymologies)
-            Text("Inflections")
-            TextField("Inflections", text: $inflections)
             Text("definitions")
             TextField("Definitions", text: $definitions)
             Text("Examples")
             TextField("Examples", text: $examples)
             }
-            Text("Synonyms")
-            TextField("Synonyms", text: $synonyms)
-            Button(action: {}){Text("Save")}
+       
 
             
             

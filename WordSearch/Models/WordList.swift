@@ -12,14 +12,17 @@ struct WordList: Codable {
     let list: [WordItem]
 }
 
-struct WordItem: Codable {
+struct WordItem: Codable, Identifiable {
+    var id: Int{
+        return defid
+    }
+    let defid: Int
     let definition: String
     let permalink: String
     let thumbs_up: Int
     let sound_urls: [String]
     let author: String
     let word: String
-    let defid: Int
     let written_on: String // mozda ce ti trebati date parser
     let example: String
     let thumbs_down: Int
