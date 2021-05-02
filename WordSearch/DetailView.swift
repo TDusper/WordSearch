@@ -13,25 +13,47 @@ struct DetailView: View {
     @State var definition: String = ""
     @State var examples: String = ""
     @State var sound: String = ""
-
-
-
+    @State var author: String = ""
+    
+    
+    
+    
     var body: some View {
+        NavigationView{
+
         VStack{
             Group{
                 Text(word.word)
-            Text("Definition")
-                TextField(word.definition, text: $definition)
-            Text("Examples")
-                TextField(word.example, text: $examples)
-            Text("Sound Examples")
+                Text("Definition")
+                Text(word.definition)
+                Text("Examples")
+                Text(word.example)
+                Text("Sound Examples")
                 ForEach(word.sound_urls, id: \.self){sound in
-                    TextField(sound, text: self.$sound)
-                    }
+                    Text(sound)
+                }
+                Text("Author")
+                Text(word.author)
             }
-       
+            VStack{
+                Text(word.permalink)
+                Text(word.written_on)
+
+            HStack{
+                Text(String(word.thumbs_up))
+                Image(systemName: "hand.thumbsup.fill")
+                
+                Button(action: {}){
+                    Text("Save")
+                }
+                Image(systemName: "hand.thumbsdown.fill")
+                Text(String(word.thumbs_down))
+            }            }                .navigationBarTitle("Word Search")
 
             
+            
+            
+            }
             
         }
     }

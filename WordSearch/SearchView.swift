@@ -12,16 +12,16 @@ struct SearchView: View {
     @ObservedObject private var apiHandler = ApiHandler()
     private var data: [WordItem] {
         apiHandler.data?.list ?? []
-    }
     
+    }
     var body: some View {
         NavigationView{
             VStack{
                 TextField("Search", text: $apiHandler.searchText, onEditingChanged:{
                     value in self.apiHandler.retrieveData(keyword: self.apiHandler.searchText)
                 })
-            List {
-                ForEach(data) { entry in
+                List {
+                    ForEach(data) { entry in
                     NavigationLink(destination: DetailView(word: entry)) {
                     // existing contents…
 
