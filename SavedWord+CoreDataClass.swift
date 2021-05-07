@@ -11,6 +11,6 @@ import Foundation
 import CoreData
 
 @objc(SavedWord)
-public class SavedWord: NSManagedObject {
+public class SavedWord: NSManagedObject, Identifiable {
 
 }

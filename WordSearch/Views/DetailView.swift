@@ -31,9 +31,7 @@ struct DetailView: View {
                     Text("Examples")
                     Text(word.example)
                     Text("Sound Examples")
-                    ForEach(word.sound_urls, id: \.self){sound in
-                        Text(sound)
-                    }
+                  
                     Text("Author")
                     Text(word.author)
                 }
@@ -48,12 +46,12 @@ struct DetailView: View {
                         Button("Save"){
                             let savedword = SavedWord(context: self.managedObjectContext)
                             savedword.author = self.word.author
-                            savedword.defid = Int16(self.word.defid)
+                            savedword.defid = Int64(self.word.defid)
                             savedword.definition = self.word.definition
                             savedword.example = self.word.example
                             savedword.permalink = self.word.permalink
-                            savedword.thumbsDown = Int16(self.word.thumbs_down)
-                            savedword.thumbsUp = Int16(self.word.thumbs_up)
+                            savedword.thumbsDown = Int64(self.word.thumbs_down)
+                            savedword.thumbsUp = Int64(self.word.thumbs_up)
                             savedword.word = self.word.word
                             savedword.writtenOn = self.word.written_on
                             do {

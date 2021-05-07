@@ -20,7 +20,6 @@ struct PersistenceController {
         newWord.definition = "This is a definition"
         newWord.example = "This is an example"
         newWord.permalink = "This is a link"
-        newWord.soundUrls = ["This is link one", "This is link two"] as NSObject
         newWord.thumbsDown = 0
         newWord.thumbsUp = 0
         newWord.word = "This is a word"

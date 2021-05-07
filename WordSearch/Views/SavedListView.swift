@@ -9,13 +9,13 @@
 import SwiftUI
 
 struct SavedListView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
+     @Environment(\.managedObjectContext) var managedObjectContext
+     @FetchRequest(entity: SavedWord.entity(), sortDescriptors: [])
+    var words: FetchedResults<SavedWord>
 
-struct SavedListView_Previews: PreviewProvider {
-    static var previews: some View {
-        SavedListView()
+    var body: some View {
+        List(words) { entry in
+            Text("\(entry.word)")
     }
+  }
 }
