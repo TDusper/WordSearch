@@ -7,8 +7,10 @@
 //
 
 import SwiftUI
+import CoreData
 
 struct ContentView: View {
+    @Environment(\.managedObjectContext) private var viewContext
     var body: some View {
         NavigationView{
             TabView{
@@ -17,7 +19,15 @@ struct ContentView: View {
                         Image(systemName: "list.dash")
                         Text("Search")
                 }
+                SavedListView()
+                    .tabItem{
+                        Image(systemName: "folder")
+                        Text("Saved")
+                }
             }
+            
+            
+            
         }
     }
 }

@@ -14,6 +14,7 @@ class ApiHandler: ObservableObject {
     let appKey = "b761cc5fc2msh502ba40f25e4418p1f3f2bjsnfe77bd7e8fa1"
     let language = "en-gb"
     @Published var searchText = "programmer"
+    
     @Published private(set) var data: WordList? = nil
     
     private var cancellable: Set<AnyCancellable> = []
@@ -38,6 +39,7 @@ class ApiHandler: ObservableObject {
             .sink(receiveCompletion: { print($0) },
                   receiveValue: { self.data = $0 })
             .store(in: &cancellable)
+        
 
     }
 }

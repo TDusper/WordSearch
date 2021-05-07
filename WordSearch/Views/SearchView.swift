@@ -12,8 +12,11 @@ struct SearchView: View {
     @ObservedObject private var apiHandler = ApiHandler()
     private var data: [WordItem] {
         apiHandler.data?.list ?? []
-    
+        
     }
+    
+
+    
     var body: some View {
         NavigationView{
             VStack{
@@ -22,14 +25,14 @@ struct SearchView: View {
                 })
                 List {
                     ForEach(data) { entry in
-                    NavigationLink(destination: DetailView(word: entry)) {
-                    // existing contents…
-
-                        Text(entry.word)
-                                    }
-                 
-                }
-            }                .navigationBarTitle("Word Search")
+                        NavigationLink(destination: DetailView(word: entry)) {
+                            // existing contents…
+                            
+                            Text(entry.word)
+                        }
+                        
+                    }
+                }                .navigationBarTitle("Word Search")
             }
         }
     }
