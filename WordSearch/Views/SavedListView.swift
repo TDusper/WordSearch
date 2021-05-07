@@ -9,13 +9,18 @@
 import SwiftUI
 
 struct SavedListView: View {
+    let persistenceController = PersistenceController.shared
+  
      @Environment(\.managedObjectContext) var managedObjectContext
      @FetchRequest(entity: SavedWord.entity(), sortDescriptors: [])
+
     var words: FetchedResults<SavedWord>
 
     var body: some View {
         List(words) { entry in
+
             Text("\(entry.word)")
-    }
+            }
+    
   }
 }
