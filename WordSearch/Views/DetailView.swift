@@ -45,8 +45,22 @@ struct DetailView: View {
                         Text(String(word.thumbs_up))
                         Image(systemName: "hand.thumbsup.fill")
                         
-                        Button(action: {}){
-                            Text("Save")
+                        Button("Save"){
+                            let savedword = SavedWord(context: self.managedObjectContext)
+                            savedword.author = self.word.author
+                            savedword.defid = Int16(self.word.defid)
+                            savedword.definition = self.word.definition
+                            savedword.example = self.word.example
+                            savedword.permalink = self.word.permalink
+                            savedword.thumbsDown = Int16(self.word.thumbs_down)
+                            savedword.thumbsUp = Int16(self.word.thumbs_up)
+                            savedword.word = self.word.word
+                            savedword.writtenOn = self.word.written_on
+                            do {
+                                try self.managedObjectContext.save()
+                            } catch {
+                                // handle the Core Data error
+                            }
                         }
                         Image(systemName: "hand.thumbsdown.fill")
                         Text(String(word.thumbs_down))

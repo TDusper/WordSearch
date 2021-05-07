@@ -20,8 +20,8 @@
 		85623276264436B8000000C6 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85623275264436B8000000C6 /* CoreData.framework */; };
 		85623279264436FB000000C6 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 85623277264436FB000000C6 /* DataModel.xcdatamodeld */; };
 		8562327B264438F6000000C6 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8562327A264438F6000000C6 /* PersistenceController.swift */; };
-		85A58F4926459A4E00D54AD4 /* SavedWord+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A58F4726459A4E00D54AD4 /* SavedWord+CoreDataClass.swift */; };
-		85A58F4A26459A4E00D54AD4 /* SavedWord+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A58F4826459A4E00D54AD4 /* SavedWord+CoreDataProperties.swift */; };
+		85A58F5D2645A10500D54AD4 /* SavedWord+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A58F5B2645A10500D54AD4 /* SavedWord+CoreDataClass.swift */; };
+		85A58F5E2645A10500D54AD4 /* SavedWord+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A58F5C2645A10500D54AD4 /* SavedWord+CoreDataProperties.swift */; };
 		85C277C9263B5F6900991B24 /* WordList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C277C8263B5F6900991B24 /* WordList.swift */; };
 /* End PBXBuildFile section */
 
@@ -41,8 +41,8 @@
 		85623275264436B8000000C6 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		85623278264436FB000000C6 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		8562327A264438F6000000C6 /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
-		85A58F4726459A4E00D54AD4 /* SavedWord+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SavedWord+CoreDataClass.swift"; sourceTree = "<group>"; };
-		85A58F4826459A4E00D54AD4 /* SavedWord+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SavedWord+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		85A58F5B2645A10500D54AD4 /* SavedWord+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SavedWord+CoreDataClass.swift"; sourceTree = "<group>"; };
+		85A58F5C2645A10500D54AD4 /* SavedWord+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SavedWord+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		85C277C8263B5F6900991B24 /* WordList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -70,8 +70,8 @@
 		8534988026398F3A0090405E = {
 			isa = PBXGroup;
 			children = (
-				85A58F4726459A4E00D54AD4 /* SavedWord+CoreDataClass.swift */,
-				85A58F4826459A4E00D54AD4 /* SavedWord+CoreDataProperties.swift */,
+				85A58F5B2645A10500D54AD4 /* SavedWord+CoreDataClass.swift */,
+				85A58F5C2645A10500D54AD4 /* SavedWord+CoreDataProperties.swift */,
 				85623277264436FB000000C6 /* DataModel.xcdatamodeld */,
 				8534988B26398F3A0090405E /* WordSearch */,
 				8534988A26398F3A0090405E /* Products */,
@@ -217,10 +217,10 @@
 				853498A92639958B0090405E /* ApiHandler.swift in Sources */,
 				85623279264436FB000000C6 /* DataModel.xcdatamodeld in Sources */,
 				853498A5263991CB0090405E /* DetailView.swift in Sources */,
-				85A58F4926459A4E00D54AD4 /* SavedWord+CoreDataClass.swift in Sources */,
+				85A58F5D2645A10500D54AD4 /* SavedWord+CoreDataClass.swift in Sources */,
 				8534989126398F3A0090405E /* ContentView.swift in Sources */,
 				8562327B264438F6000000C6 /* PersistenceController.swift in Sources */,
-				85A58F4A26459A4E00D54AD4 /* SavedWord+CoreDataProperties.swift in Sources */,
+				85A58F5E2645A10500D54AD4 /* SavedWord+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

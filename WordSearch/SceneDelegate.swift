@@ -63,7 +63,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 lazy var persistentContainer: NSPersistentContainer = {
   // 2
-  let container = NSPersistentContainer(name: "SavedWords")
+  let container = NSPersistentContainer(name: "DataModel")
   // 3
   container.loadPersistentStores { _, error in
     // 4

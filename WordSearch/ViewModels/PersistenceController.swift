@@ -23,6 +23,8 @@ struct PersistenceController {
         newWord.soundUrls = ["This is link one", "This is link two"] as NSObject
         newWord.thumbsDown = 0
         newWord.thumbsUp = 0
+        newWord.word = "This is a word"
+        newWord.writtenOn = "Written date"
         }
         return controller
     }()
@@ -33,7 +35,7 @@ struct PersistenceController {
     init(inMemory: Bool = false) {
         // If you didn't name your model Main you'll need
         // to change this name below.
-        container = NSPersistentContainer(name: "Main")
+        container = NSPersistentContainer(name: "DataModel")
 
         if inMemory {
             container.persistentStoreDescriptions.first?.url = URL(fileURLWithPath: "/dev/null")
