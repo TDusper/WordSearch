@@ -26,7 +26,6 @@ struct SavedDetailView: View {
                     Text(word.definition)
                     Text("Examples")
                     Text(word.example)
-                    Text("Sound Examples")
                   
                     Text("Author")
                     Text(word.author)
