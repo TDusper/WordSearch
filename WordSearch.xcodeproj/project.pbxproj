@@ -20,6 +20,7 @@
 		85623276264436B8000000C6 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85623275264436B8000000C6 /* CoreData.framework */; };
 		85623279264436FB000000C6 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 85623277264436FB000000C6 /* DataModel.xcdatamodeld */; };
 		8562327B264438F6000000C6 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8562327A264438F6000000C6 /* PersistenceController.swift */; };
+		859BA55C2646CC69000A2638 /* SavedDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 859BA55B2646CC69000A2638 /* SavedDetailView.swift */; };
 		85A58F5D2645A10500D54AD4 /* SavedWord+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A58F5B2645A10500D54AD4 /* SavedWord+CoreDataClass.swift */; };
 		85A58F5E2645A10500D54AD4 /* SavedWord+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A58F5C2645A10500D54AD4 /* SavedWord+CoreDataProperties.swift */; };
 		85C277C9263B5F6900991B24 /* WordList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C277C8263B5F6900991B24 /* WordList.swift */; };
@@ -41,6 +42,7 @@
 		85623275264436B8000000C6 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		85623278264436FB000000C6 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		8562327A264438F6000000C6 /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
+		859BA55B2646CC69000A2638 /* SavedDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedDetailView.swift; sourceTree = "<group>"; };
 		85A58F5B2645A10500D54AD4 /* SavedWord+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SavedWord+CoreDataClass.swift"; sourceTree = "<group>"; };
 		85A58F5C2645A10500D54AD4 /* SavedWord+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SavedWord+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		85C277C8263B5F6900991B24 /* WordList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordList.swift; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 				853498A4263991CB0090405E /* DetailView.swift */,
 				8534989026398F3A0090405E /* ContentView.swift */,
 				8562327226442C98000000C6 /* SavedListView.swift */,
+				859BA55B2646CC69000A2638 /* SavedDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -211,6 +214,7 @@
 			files = (
 				8562327326442C98000000C6 /* SavedListView.swift in Sources */,
 				85C277C9263B5F6900991B24 /* WordList.swift in Sources */,
+				859BA55C2646CC69000A2638 /* SavedDetailView.swift in Sources */,
 				853498A126398F590090405E /* SearchView.swift in Sources */,
 				8534988D26398F3A0090405E /* AppDelegate.swift in Sources */,
 				8534988F26398F3A0090405E /* SceneDelegate.swift in Sources */,

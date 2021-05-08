@@ -18,9 +18,9 @@ struct SavedListView: View {
 
     var body: some View {
         List(words) { entry in
-
+            NavigationLink(destination: SavedDetailView(word: entry)) {
             Text("\(entry.word)")
             }
-    
+        }
   }
 }
