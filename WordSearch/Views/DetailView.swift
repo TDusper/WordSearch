@@ -17,32 +17,39 @@ struct DetailView: View {
     @State var examples: String = ""
     @State var sound: String = ""
     @State var author: String = ""
+    @State var buttonText = "Save"
     
     
     
     var body: some View {
         NavigationView{
-            
+             ScrollView{
             VStack{
                 Group{
-                    Text(word.word)
+                    Text(word.word.uppercased()).bold().padding()
                     Text("Definition")
-                    Text(word.definition)
-                    Text("Examples")
-                    Text(word.example)
-                  
-                    Text("Author")
-                    Text(word.author)
+                    Text(word.definition).padding()
+                      
+
+                    Text("Examples").padding(.top)
+                    Text(word.example).padding()
+                    HStack{
+                    Text("Author: ")
+                        Text(word.author)}
                 }
                 VStack{
-                    Text(word.permalink)
-                    Text(word.written_on)
-                    
                     HStack{
-                        Text(String(word.thumbs_up))
+                    Text("Submitted: ")
+
+                    Text(word.written_on)
+                    }
+                    HStack{
+                        Text(String(word.thumbs_up)).padding()
                         Image(systemName: "hand.thumbsup.fill")
                         
-                        Button("Save"){
+                        Button(self.buttonText){
+                            self.buttonText = "Saved"
+                            self.disabled(true)
                             let savedword = SavedWord(context: self.managedObjectContext)
                             savedword.author = self.word.author
                             savedword.defid = Int64(self.word.defid)
@@ -58,14 +65,13 @@ struct DetailView: View {
                             } catch {
                                 // handle the Core Data error
                             }
-                        }
+                        }.padding()
                         Image(systemName: "hand.thumbsdown.fill")
-                        Text(String(word.thumbs_down))
-                    }            }                .navigationBarTitle("Word Search")
+                        Text(String(word.thumbs_down)).padding()
+                    }            }                .navigationBarTitle("Word Search", displayMode: .inline)
                 
                 
-                
-                
+            }
             }
             
         }

@@ -17,37 +17,45 @@ struct SavedDetailView: View {
     
     
     var body: some View {
-        NavigationView{
-            
-            VStack{
-                Group{
-                    Text(word.word)
-                    Text("Definition")
-                    Text(word.definition)
-                    Text("Examples")
-                    Text(word.example)
-                  
-                    Text("Author")
-                    Text(word.author)
-                }
-                VStack{
-                    Text(word.permalink)
-                    Text(word.writtenOn)
-                    
-                    HStack{
-                        Text(String(word.thumbsUp))
-                        Image(systemName: "hand.thumbsup.fill")
-                        Image(systemName: "hand.thumbsdown.fill")
-                        Text(String(word.thumbsDown))
-                    }            }                .navigationBarTitle("Word Search")
-                
-                
-                
-                
-            }
-            
-        }
-    }
-}
+         NavigationView{
+                     ScrollView{
+                    VStack{
+                        Group{
+                            Text(word.word.uppercased()).bold().padding()
+                            Text("Definition")
+                            Text(word.definition).padding()
+                              
 
+                            Text("Examples").padding(.top)
+                            Text(word.example).padding()
+                            HStack{
+                            Text("Author: ")
+                                Text(word.author)}
+                        }
+                        VStack{
+                            HStack{
+                            Text("Submitted: ")
+
+                            Text(word.writtenOn)
+                            }
+                            HStack(){
+                                Text(String(word.thumbsUp)).padding()
+                                Image(systemName: "hand.thumbsup.fill")
+                                
+                                Button("Saved"){
+                                    
+                                }
+                                .disabled(true)
+                                .padding()
+                                Image(systemName: "hand.thumbsdown.fill")
+                                Text(String(word.thumbsDown)).padding()
+                            }            }                .navigationBarTitle("Word Search", displayMode: .inline)
+                        
+                        
+                    }
+                    }
+                    
+                }
+            }
+        }
 

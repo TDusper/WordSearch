@@ -22,7 +22,7 @@ struct SearchView: View {
             VStack{
                 TextField("Search", text: $apiHandler.searchText, onEditingChanged:{
                     value in self.apiHandler.retrieveData(keyword: self.apiHandler.searchText)
-                })
+                    }) .textFieldStyle(RoundedBorderTextFieldStyle())
                 List {
                     ForEach(data) { entry in
                         NavigationLink(destination: DetailView(word: entry)) {

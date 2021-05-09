@@ -13,7 +13,7 @@ class ApiHandler: ObservableObject {
     let appId = "mashape-community-urban-dictionary.p.rapidapi.com"
     let appKey = "b761cc5fc2msh502ba40f25e4418p1f3f2bjsnfe77bd7e8fa1"
     let language = "en-gb"
-    @Published var searchText = "programmer"
+    @Published var searchText = "Apple"
     
     @Published private(set) var data: WordList? = nil
     
